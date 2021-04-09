@@ -10,19 +10,24 @@ html {
     box-sizing: border-box;
 }
 
-nav {
+.nav-container {
     width: 100%;
     height: auto;
-}
-
-header {
-    background: #363C74;
-    width: 100%;
-    height: 70px;
+    background: ghostwhite;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
 }
 
 .nav-link-wrapper {
     background: ghostwhite;
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    
 }
 
 input[type="text"] {
