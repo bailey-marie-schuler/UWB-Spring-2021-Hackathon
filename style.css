@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap');
+
+html {
+    font-family: 'Encode Sans';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    outline: none;
+    border: none;
+
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 9px;
+    outline: 1px solid black;
+}
