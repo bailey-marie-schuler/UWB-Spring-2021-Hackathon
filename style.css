@@ -17,6 +17,7 @@ html {
     display: flex;
     position: relative;
     justify-content: space-between;
+    padding: 1.2rem;
 }
 
 .nav-link-wrapper {
@@ -30,14 +31,29 @@ html {
     
 }
 
-input[type="text"] {
-    outline: none;
-    border: none;
-
+.test {
+    display: none;
+    width: 100%;
+    height: 80px;
+    background: red;
 }
 
 form {
     border: 1px solid black;
     border-radius: 9px;
-    outline: 1px solid black;
+    width: 500px;
+}
+
+input[type="text"] {
+    outline: none;
+    border: none;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.slide-1-title {
+    text-align: center;
 }
