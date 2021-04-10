@@ -31,7 +31,6 @@
                 <i class="fas fa-search"></i>
                 <input id="search" type="text" placeholder="search" class="form-control">
             </form>
-            <div class="test"></div>
             <div class="grid-container">
                 <table class = "table custom">
                     <tr class = "bg-info">
@@ -65,36 +64,8 @@
         </div>
     </footer> 
 
-
-    <script>
-        var myArray = [
-            {'name': 'Miltun, Vicki', 'ClassDep' : 'English', 'ClassID':'101'},
-            {'name': 'Miltun, Vicki', 'ClassDep' : 'English', 'ClassID':'144'},
-            {'name': 'Miltun, Vicki', 'ClassDep' : 'English', 'ClassID':'242'},
-            {'name': 'Bower. Noble', 'ClassDep' : 'Physics', 'ClassID':'101'},
-            {'name': 'Bower, Noble', 'ClassDep' : 'Physics', 'ClassID':'121'},
-            {'name': 'Bower, Noble', 'ClassDep' : 'Physics', 'ClassID':'122'}
-        ]
-
-        buildTable(myArray)
-
-        function buildTable(data){
-            var table = document.getElementById('myTable')
-
-            table.innerHTML = ''
-            
-            for (var i = 0; i < data.length; i++){
-                var row = `<tr>
-                                <td>${data[i].name}</td>
-                                <td>${data[i].ClassDep}</td>
-                                <td>${data[i].ClassID}</td>
-                        </tr>`
-                        table.innerHTML += row
-            }
-        }
-    </script>
+    <script src="table.js"></script>
     <script type="text/javascript" src="main.js"></script>
-    <script type="text/javascript" src="teachers.json"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
