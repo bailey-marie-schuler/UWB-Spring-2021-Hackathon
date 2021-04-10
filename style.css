@@ -150,28 +150,20 @@ footer {
     width: 100%;
     clear: both;
     color: #E8D3A2;
+    line-height: 2rem;
 }
 
 .footer-img {
     width: 250px;
 }
 
-.social-media {
+.info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 350px;
 }
 
-.fa {
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background: ghostwhite;
-    color:#363C74;
-    font-size: 30px;
-    text-align: center;
-    width: var(--ss-boxsize);
-    height: var(--ss-boxsize);
-    text-decoration: none;
+hr {
+    transform: rotate(90deg);
 }
