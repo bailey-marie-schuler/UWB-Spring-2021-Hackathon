@@ -150,7 +150,6 @@ footer {
     width: 100%;
     clear: both;
     color: #E8D3A2;
-    line-height: 2rem;
 }
 
 .footer-img {
@@ -159,8 +158,9 @@ footer {
 
 .info {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 350px;
 }
 
