@@ -141,6 +141,18 @@ form .fas {
     width: 98%;
 }
 
+th {
+    background-color: rebeccapurple;
+    color: white;
+}
+td{
+    color:white;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+}
+
 footer {
     display: flex;
     justify-content: space-evenly;
