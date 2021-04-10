@@ -1,16 +1,7 @@
-//search
-const inputForm = document.querySelector('form');
-const input = document.querySelector('.search');
-const inputValue = input.value;
-let searchQuery = "";
+const faketeacherdata = 'faketeacher.csv';
+const teacherAndClass = 'teacherAndClass';
+const teacher = 'teachers.csv';
 
-inputForm.addEventListener('submit', (e) => {
-    e.preventDefault;
-    search(inputValue);
-});
-
-search(result) ;{
-    result.filter( (text) => {
-        
-    })
-}
+fetch(`data/${teacherAndClass}.json`)
+.then(res => res.json())
+.then(data => console.log(data))
