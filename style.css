@@ -185,3 +185,7 @@ footer {
 hr {
     transform: rotate(90deg);
 }
+
+.table {
+    width: 100%;
+}
