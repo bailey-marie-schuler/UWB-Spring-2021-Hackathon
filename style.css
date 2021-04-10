@@ -1,59 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap');
 
-html {
-    font-family: 'Encode Sans';
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Encode Sans';
+    font-size: 12px;
 }
 
 .nav-container {
     width: 100%;
-    height: auto;
-    background: ghostwhite;
+    height: 100%;
+    background: linear-gradient(to right, ghostwhite, #E8D3A2);
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
     justify-content: space-between;
     padding: 1.2rem;
 }
 
 .nav-link-wrapper {
-    background: ghostwhite;
     list-style-type: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link-wrapper > li {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .nav-link {
     text-decoration: none;
-    
-}
-
-.test {
-    display: none;
-    width: 100%;
-    height: 80px;
-    background: red;
+    font-size: 1.3rem;
 }
 
 form {
     border: 1px solid black;
-    border-radius: 9px;
+    border-radius: 20px;
     width: 500px;
 }
 
 input[type="text"] {
     outline: none;
     border: none;
+    height: 30px;
+    font-size: 1.3rem;
 }
 
-main {
-    width: 90%;
-    margin: 0 auto;
+.fas {
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.slide-1 {
+    width: 100%;
+    height: 100%;
 }
 
 .slide-1-title {
     text-align: center;
+    font-size: 2.2rem;
+}
+
+
+.slide-2 {
+    width: 100%;
+    height: 700px;;
+    position: relative;
+}
+
+.slide-2-img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.slide-2-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    padding: 15px;
+    display: grid;
+    background: black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    height: 250px;
+    text-align: center;
+    background: gray;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #363C74;
+    height: 100px;
+    width: 100%;
+    clear: both;
 }
