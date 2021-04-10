@@ -117,19 +117,21 @@ form .fas {
 }
 
 .grid-container {
-    padding: 10px;
-    display: grid;
     background: #363C74;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    overflow: auto;
+    align-self: start;
+    height: 1200px;
 }
 
 .grid-item {
     height: 50px;
+    width: 100%;
     text-align: center;
     background: #E8D3A2;
-    text-align: center;
     font-size: 1.6rem;
+    align-self: start;
+    margin: 10px 0;
 }
 
 footer {
