@@ -119,7 +119,7 @@ form .fas {
 .grid-container {
     background: #363C74;
     grid-template-columns: 1fr;
-    overflow: scroll;
+    overflow: auto;
     align-self: start;
     height: 1200px;
 }
