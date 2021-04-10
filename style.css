@@ -97,15 +97,15 @@ input[type="text"] {
 .grid-container {
     padding: 15px;
     display: grid;
-    background: black;
-    grid-template-columns: 1fr 1fr 1fr;
+    background: #363C74;
+    grid-template-columns: 1fr;
     grid-gap: 10px;
 }
 
 .grid-item {
-    height: 250px;
+    height: 50px;
     text-align: center;
-    background: gray;
+    background: #E8D3A2;
     text-align: center;
 }
 
@@ -114,7 +114,7 @@ footer {
     justify-content: center;
     align-items: center;
     background: #363C74;
-    height: 100px;
+    height: 180px;
     width: 100%;
     clear: both;
 }
