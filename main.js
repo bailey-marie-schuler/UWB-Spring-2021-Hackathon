@@ -1,16 +1,16 @@
 //search
+const inputForm = document.querySelector('form');
 const input = document.querySelector('.search');
+const inputValue = input.value;
 let searchQuery = "";
 
-input.addEventListener('submit', (e) => {
+inputForm.addEventListener('submit', (e) => {
     e.preventDefault;
-    searchQuery = e.target.search.value;
-    search(searchQuery);
+    search(inputValue);
 });
 
 search(result) ;{
-    let text = result;
-    if (text[0] == "f") {
-        document.location.href = '#bottom';
-    }
+    result.filter( (text) => {
+        
+    })
 }
