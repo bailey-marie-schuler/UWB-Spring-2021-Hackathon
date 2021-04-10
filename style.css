@@ -120,7 +120,7 @@ form .fas {
     font-size: 40px;
 }
 
-.container {
+.class-container {
     background: #363C74;
     grid-template-columns: 1fr;
     overflow: auto;
@@ -130,7 +130,7 @@ form .fas {
     height: 1200px;
 }
 
-.item {
+.grid-item {
     height: 50px;
     width: 100%;
     text-align: center;
@@ -148,9 +148,7 @@ th {
 td{
     color:white;
     font-size: large;
-    text-align: center;
-    justify-content: center;
-    align-items:center;
+
 }
 
 footer {
