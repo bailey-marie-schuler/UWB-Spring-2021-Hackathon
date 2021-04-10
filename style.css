@@ -122,14 +122,16 @@ form .fas {
     background: #363C74;
     grid-template-columns: 1fr;
     grid-gap: 10px;
+    overflow: auto;
+    align-self: start;
 }
 
 .grid-item {
     height: 50px;
     text-align: center;
     background: #E8D3A2;
-    text-align: center;
     font-size: 1.6rem;
+    align-self: start;
 }
 
 footer {

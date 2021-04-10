@@ -1,8 +1,9 @@
-import data from "teachers.json";
+const input = document.querySelector('.search');
+const item = document.querySelector('.here');
+let searchQuery = "";
 
-const item = document.querySelector('#here');
-
-console.log(data);
-fetch("test.json")
-    .then(response => console.log(response))
-    .catch(err => console.log('Error'));
+input.addEventListener('submit', (e) => {
+    e.preventDefault;
+    searchQuery = e.target.search;
+    
+})
