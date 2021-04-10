@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap');
 
 html {
-    --ss-size: 2rem;
+    --ss-color: ghostwhite;
+    --ss-boxsize: 4rem;
 }
 
 * {
@@ -63,10 +64,11 @@ input[type="text"] {
     border: none;
     height: 30px;
     font-size: 1.3rem;
+
 }
 
-.fas {
-    padding-left: 5px;
+form .fas {
+    padding: 0 10px 0 15px;
     font-size: 16px;
 }
 
@@ -132,7 +134,7 @@ input[type="text"] {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background: #363C74;
     height: 180px;
@@ -141,7 +143,26 @@ footer {
     color: #E8D3A2;
 }
 
+.footer-img {
+    width: 250px;
+}
+
 .social-media {
-    float: right;
-    width: var(--ss-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+
+.fa {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: ghostwhite;
+    color:#363C74;
+    font-size: 30px;
+    text-align: center;
+    width: var(--ss-boxsize);
+    height: var(--ss-boxsize);
+    text-decoration: none;
 }
