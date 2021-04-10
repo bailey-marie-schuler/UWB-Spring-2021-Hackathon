@@ -28,23 +28,22 @@
         <section class="slide-1">
             <h1 class="slide-1-title">UW Course Evaluation</h1>
             <form>
-                <i class="fas fa-search" type="submit"></i>
-                <input class="search" type="text" placeholder="search">
+                <i class="fas fa-search"></i>
+                <input id="search" type="text" placeholder="search" class="form-control">
             </form>
             <div class="test"></div>
             <div class="grid-container">
-                <div class="grid-item">1</div>
-                <div class="grid-item">2</div>
-                <div class="grid-item">3</div>
-                <div class="grid-item">4</div>
-                <div class="grid-item">5</div>
-                <div class="grid-item">6</div>
-                <div class="grid-item">7</div>
-                <div class="grid-item">8</div>
-                <div class="grid-item">9</div>
-                <div class="grid-item">10</div>
-                <div class="grid-item">11</div>
-                <div class="grid-item">12</div>
+                <table class = "table custom">
+                    <tr class = "bg-info">
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Course Number</th>
+                    </tr>
+    
+                    <tbody id="myTable">
+                        
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -66,8 +65,37 @@
         </div>
     </footer> 
 
+
+    <script>
+        var myArray = [
+            {'name': 'Miltun, Vicki', 'ClassDep' : 'English', 'ClassID':'101'},
+            {'name': 'Miltun, Vicki', 'ClassDep' : 'English', 'ClassID':'144'},
+            {'name': 'Miltun, Vicki', 'ClassDep' : 'English', 'ClassID':'242'},
+            {'name': 'Bower. Noble', 'ClassDep' : 'Physics', 'ClassID':'101'},
+            {'name': 'Bower, Noble', 'ClassDep' : 'Physics', 'ClassID':'121'},
+            {'name': 'Bower, Noble', 'ClassDep' : 'Physics', 'ClassID':'122'}
+        ]
+
+        buildTable(myArray)
+
+        function buildTable(data){
+            var table = document.getElementById('myTable')
+
+            table.innerHTML = ''
+            
+            for (var i = 0; i < data.length; i++){
+                var row = `<tr>
+                                <td>${data[i].name}</td>
+                                <td>${data[i].ClassDep}</td>
+                                <td>${data[i].ClassID}</td>
+                        </tr>`
+                        table.innerHTML += row
+            }
+        }
+    </script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="teachers.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
