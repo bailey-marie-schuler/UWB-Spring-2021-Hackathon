@@ -72,17 +72,20 @@
     </footer> 
 
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        var myArray = [
-            {'FirstName': 'Viki', 'LastName': 'Miltun', 'Department' : 'English', 'ClassID':'101', 'Year':'21', 'Quarter': "SP"},
-            {'FirstName': 'Viki', 'LastName': 'Miltun', 'Department' : 'English', 'ClassID':'144', 'Year':'20', 'Quarter': "AU"},
-            {'FirstName': 'Viki', 'LastName': 'Miltun', 'Department' : 'English', 'ClassID':'242', 'Year':'20', 'Quarter': "WI"},
-            {'FirstName': 'Nobil', 'LastName': 'Bower', 'Department' : 'Physics', 'ClassID':'101', 'Year':'21', 'Quarter': "WI"},
-            {'FirstName': 'Nobil', 'LastName': 'Bower', 'Department' : 'Physics', 'ClassID':'121', 'Year':'19', 'Quarter': "SP"},
-            {'FirstName': 'Nobil', 'LastName': 'Bower', 'Department' : 'Physics', 'ClassID':'122', 'Year':'20', 'Quarter': "AU"}
-        ]
+        var myArray = []
+        
+        $.ajax({
+            method:'GET',
+            url:'https://raw.githubusercontent.com/kylevh/TEACHERDATA/main/teacherAndClass.json',
+            success:function(response){
+                myArray = response
+                buildTable(myArray)
+                console.log(myArray)
+            }
+
+        })
 
         $('#search-input').on('keyup', function(){
             var value = $(this).val()
@@ -112,8 +115,10 @@
             buildTable(myArray)
         })
 
-        buildTable(myArray)
 
+        //Inputs value which is typed by user into search bar and passes data which the collection of names and 
+        //classes, year, quarter, etc. and searches whether the value matches with any FirstName, if so, push
+        //out filteredData with all matches.
         function searchTable(value, data){
             var filteredData = []
             for(var i = 0; i < data.length; i++)
