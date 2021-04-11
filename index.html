@@ -70,29 +70,46 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="import_test.js"></script>
     <script>
-        var myArray = [{
-         "FirstName":"Nobil",
-         "LastName":"Bower",
-         "Department":"Physics",
-         "ClassID":"101",
-         "Year":"21",
-         "Quarter":"WI"
-      },
-      {
-         "FirstName":"Viki",
-         "LastName":"Miltun",
-         "Department":"English",
-         "ClassID":"242",
-         "Year":"20",
-         "Quarter":"WI"
-      }
-    ]
-        
-      //MyArray needs an array like the example above. Remove data in myArray and replace with
-      //data from CSV and then remove the buildTable function below this and it should in theory
-      //work as long as it follows the formatting.
+        const faketeacherdata = 'faketeacher.csv';
+        const teacherAndClass = 'teacherAndClass.json';
+        const teacher = 'teachers.csv';
+
+        var myArray = [];
+        fetch(`datas/${teacherAndClass}`)
+            .then(res => res.json())
+            .then(data => {
+                myArray = data;
+                console.log(myArray);
+
+        /*
+            let box = document.querySelector('.box');
+
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch(`datas/${teacherAndClass}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        console.log("------------")
+                        data.map(value => {
+                            console.log(value[0])
+                            box.innerHTML +=
+                                `
+                        <p>${value[0]}</p>
+                        <p>${value[1]}</p>
+                        <p>${value[2]}</p>
+                        <p>${value[3]}</p>
+                        <p>${value[4]}</p>
+                        `
+                        })
+                    })
+            })
+        */
+
+
+        //MyArray needs an array like the example above. Remove data in myArray and replace with
+        //data from CSV and then remove the buildTable function below this and it should in theory
+        //work as long as it follows the formatting.
 
         buildTable(myArray);
         /*$.ajax({
@@ -107,7 +124,7 @@
         })*/
 
         //Search function updates everytime a 'keyup' is detected. Updates in real-time while typing
-        $('#search-input').on('keyup', function(){
+        $('#search-input').on('keyup', function () {
             var value = $(this).val()
             console.log('Value:', value)
             var data = searchTable(value, myArray)
@@ -115,7 +132,7 @@
         })
 
         //This is the column sort click detector. If say 'Year' is clicked, change descending order to ascending & vice versa
-        $('th').on('click', function(){
+        $('th').on('click', function () {
             var column = $(this).data('column')
             var order = $(this).data('order')
             var text = $(this).html()
@@ -160,7 +177,7 @@
             table.innerHTML = ''
 
             //Prints rows with all the of the follow collumns from the array
-            for (var i = 0; i < data.length; i++){
+            for (var i = 0; i < data.length; i++) {
                 var row = `<tr>
                                 <td>${data[i].LastName}</td>
                                 <td>${data[i].FirstName}</td>
@@ -173,6 +190,7 @@
                 table.innerHTML += row
             }
         }
+    });
     </script>
 
 </body>

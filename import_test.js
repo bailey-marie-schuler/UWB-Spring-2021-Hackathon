@@ -1,12 +1,12 @@
 const faketeacherdata = 'faketeacher.csv';
-const teacherAndClass = 'teacherAndClass';
+const teacherAndClass = 'teacherAndClass.json';
 const teacher = 'teachers.csv';
 
 let box = document.querySelector('.box');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`data/${teacherAndClass}.json`)
+    fetch(`datas/${teacherAndClass}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
