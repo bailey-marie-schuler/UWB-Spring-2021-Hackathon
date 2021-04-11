@@ -1,6 +1,6 @@
 # UWB 2021 Hacks From Home: _A New Course Evaluation Catalog_
 ### UWB Hacks 2021 Track
-Tools Track (Helping other students achieve success while learning from home)
+Tools Track (Helping other students achieve success while learning from home) and the wildcard track.
 ### Our Goal
 Although filled with an ample amount of information and statistics, UW's current Course Evaluation Catalog lacks user friendliness and its outdated design turns off many who look to the website for advice. We wanted to design a new course catalog system that would improve the usability of the site by enhancing its accessibility and design. Data is highly important for the online format due to Covid-19 and should be accessible for all students in need of accessing it. 
 ### User Experience
