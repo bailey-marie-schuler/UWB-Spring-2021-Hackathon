@@ -15,13 +15,13 @@ html {
 
 .nav-container {
     width: 100%;
-    height: 100%;
+    height: 60px;
     background: linear-gradient(to right, ghostwhite, #E8D3A2);
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2rem;
+    padding-left: 10px;
 }
 
 .nav-logo {
@@ -36,21 +36,22 @@ html {
     align-items: center;
 }
 
-.nav-link-wrapper > li {
-    margin: 0 15px;
-}
-
 .nav-link {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     outline: none;
     bordeR: none;
     font-size: 1.5rem;
+    color: #2d003f;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    padding: 23px 10px;
 }
 
 .nav-link:hover {
-    color: #664238;
     transition: all .3s ease;
+    color: #691a04;
+    background: #ffefc9;
 }
 
 form {
@@ -190,6 +191,7 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
+    
     nav {
         flex-direction: column;
         padding: 10px 0;
