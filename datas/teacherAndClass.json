@@ -1,9 +1,49 @@
-[
-    ["CSSS", 143, "Nickson", "Jack", 21, "SP"],
-    ["CSSS", 144, "Nickson", "Jack", 21, "SP"],
-    ["CSSS", 242, "Nickson", "Jack", 21, "AU"],
-    ["CSSS", 244, "Nickson", "Jack", 20, "AU"],
-    ["CSSS", 301, "Nickson", "Jack", 20, "WI"],
-    ["CSSS", 342, "Nickson", "Jack", 20, "WI"]
 
-]
+    {
+        "FirstName": "Viki",
+        "LastName": "Miltun",
+        "Department": "English",
+        "ClassID": "101",
+        "Year": "21",
+        "Quarter": "SP"
+    },
+    {
+        "FirstName": "Viki",
+        "LastName": "Miltun",
+        "Department": "English",
+        "ClassID": "144",
+        "Year": "20",
+        "Quarter": "AU"
+    },
+    {
+        "FirstName": "Viki",
+        "LastName": "Miltun",
+        "Department": "English",
+        "ClassID": "242",
+        "Year": "20",
+        "Quarter": "WI"
+    },
+    {
+        "FirstName": "Nobil",
+        "LastName": "Bower",
+        "Department": "Physics",
+        "ClassID": "101",
+        "Year": "21",
+        "Quarter": "WI"
+    },
+    {
+        "FirstName": "Nobil",
+        "LastName": "Bower",
+        "Department": "Physics",
+        "ClassID": "121",
+        "Year": "19",
+        "Quarter": "SP"
+    },
+    {
+        "FirstName": "Nobil",
+        "LastName": "Bower",
+        "Department": "Physics",
+        "ClassID": "122",
+        "Year": "20",
+        "Quarter": "AU"
+    }
