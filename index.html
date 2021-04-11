@@ -71,10 +71,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        // data sheets
         const faketeacherdata = 'faketeacher.csv';
         const teacherAndClass = 'teacherAndClass.json';
         const teacher = 'teachers.csv';
-
+        
+        // fetching data
         var myArray = [];
         fetch(`datas/${teacherAndClass}`)
             .then(res => res.json())
