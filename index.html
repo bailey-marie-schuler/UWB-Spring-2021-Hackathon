@@ -73,26 +73,27 @@
     <script src="import_test.js"></script>
     <script>
         var myArray = [{
-                "FirstName": "Nobil",
-                "LastName": "Bower",
-                "Department": "Physics",
-                "ClassID": "101",
-                "Year": "21",
-                "Quarter": "WI"
-            },
-            {
-                "FirstName": "Viki",
-                "LastName": "Miltun",
-                "Department": "English",
-                "ClassID": "242",
-                "Year": "20",
-                "Quarter": "WI"
-            }
-        ]
+         "FirstName":"Nobil",
+         "LastName":"Bower",
+         "Department":"Physics",
+         "ClassID":"101",
+         "Year":"21",
+         "Quarter":"WI"
+      },
+      {
+         "FirstName":"Viki",
+         "LastName":"Miltun",
+         "Department":"English",
+         "ClassID":"242",
+         "Year":"20",
+         "Quarter":"WI"
+      }
+    ]
+        
+      //MyArray needs an array like the example above. Remove data in myArray and replace with
+      //data from CSV and then remove the buildTable function below this and it should in theory
+      //work as long as it follows the formatting.
 
-        //MyArray needs an array like the example above. Remove data in myArray and replace with
-        //data from CSV and then remove the buildTable function below this and it should in theory
-        //work as long as it follows the formatting.
         buildTable(myArray);
         /*$.ajax({
             method:'GET',
@@ -105,14 +106,16 @@
 
         })*/
 
-        $('#search-input').on('keyup', function () {
+        //Search function updates everytime a 'keyup' is detected. Updates in real-time while typing
+        $('#search-input').on('keyup', function(){
             var value = $(this).val()
             console.log('Value:', value)
             var data = searchTable(value, myArray)
             buildTable(data)
         })
 
-        $('th').on('click', function () {
+        //This is the column sort click detector. If say 'Year' is clicked, change descending order to ascending & vice versa
+        $('th').on('click', function(){
             var column = $(this).data('column')
             var order = $(this).data('order')
             var text = $(this).html()
@@ -157,8 +160,8 @@
             table.innerHTML = ''
 
             //Prints rows with all the of the follow collumns from the array
-            for (var i = 0; i < data.length; i++) {
-                var row = `<tr data-href = "">
+            for (var i = 0; i < data.length; i++){
+                var row = `<tr>
                                 <td>${data[i].LastName}</td>
                                 <td>${data[i].FirstName}</td>
                                 <td>${data[i].Department}</td>
