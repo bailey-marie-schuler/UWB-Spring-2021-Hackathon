@@ -14,5 +14,7 @@ Most of our team are fairly new programmers and have no experience with database
 ### Future Steps
 In the future we would like to display trends in teacher ratings so students can be aware of whether or not a professor is changing their course design. We would also like to implement a function where students can build a preliminary schedule and see how rigorous their schedule might be compared to the average schedule. Our next steps would be to reach out to the University of Washington, who has already expressed concern about this outdated website, and help integrate our design into their current framework as a team. This would allow them to showcase their students work and ultimately have a much needed website renovation for free!
 
+Before submitting the project to the University of Washington to use we would have to make sure all of the front end code matches the figma file and that our search bar can access our artificial data. For this to work for the University of Washington would have to have access to their catalog database to get the data for the course evaluation and integrate into our design.
+
 ### Credits
 Bailey Schuler, Gwen Furiato, Kyle Huang, Kyle Huynh, and Kyle Fukuda
