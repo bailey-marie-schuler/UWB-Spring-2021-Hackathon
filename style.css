@@ -184,6 +184,10 @@ footer {
 
 hr {
     transform: rotate(90deg);
+    color: #E8D3A2;
+    background-color: #E8D3A2;
+    height: 2px;
+    transition: all .3s ease-in-out;
 }
 
 .table {
