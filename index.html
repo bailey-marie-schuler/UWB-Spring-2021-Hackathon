@@ -74,9 +74,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="search.js"></script>
     <script>
-        var myArray = []
+        var myArray = [{
+         "FirstName":"Nobil",
+         "LastName":"Bower",
+         "Department":"Physics",
+         "ClassID":"101",
+         "Year":"21",
+         "Quarter":"WI"
+      },
+      {
+         "FirstName":"Viki",
+         "LastName":"Miltun",
+         "Department":"English",
+         "ClassID":"242",
+         "Year":"20",
+         "Quarter":"WI"
+      }
+    ]
         
-        $.ajax({
+      //MyArray needs an array like the example above. Remove data in myArray and replace with
+      //data from CSV and then remove the buildTable function below this and it should in theory
+      //work as long as it follows the formatting.
+        buildTable(myArray);
+        /*$.ajax({
             method:'GET',
             url:'https://raw.githubusercontent.com/kylevh/TEACHERDATA/main/teacherAndClass.json',
             success:function(response){
@@ -85,7 +105,7 @@
                 console.log(myArray)
             }
 
-        })
+        })*/
 
         $('#search-input').on('keyup', function(){
             var value = $(this).val()
@@ -139,8 +159,9 @@
 
             table.innerHTML = ''
             
+            //Prints rows with all the of the follow collumns from the array
             for (var i = 0; i < data.length; i++){
-                var row = `<tr>
+                var row = `<tr data-href = "">
                                 <td>${data[i].LastName}</td>
                                 <td>${data[i].FirstName}</td>
                                 <td>${data[i].Department}</td>
