@@ -50,12 +50,13 @@ html {
 
 .nav-link:hover {
     color: #664238;
+    transition: all .3s ease;
 }
 
 form {
     border: 1px solid black;
     border-radius: 20px;
-    width: 500px;
+    width: 700px;
     margin: 15px auto;
     display: flex;
     justify-content: center;
@@ -189,16 +190,103 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-    footer {
+    nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        height: 100%;
+    }
+
+    .nav-link-wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 0;
+    }
+
+    .nav-logo {
+        width: 300px;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    form {
+        width: 260px;
+    }
+
+    section {
+        grid-template-columns: 100%;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .section {
+        height: 400px;
+    }
+
+    .left {
+        padding-top: 0;
+    }
+
+    .right {
+        width: 300px;
+    }
+
+    .info {
+        margin: 0;
+    }
+
+    .info, .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skillBox {
+        height: 100px;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        padding: 30px 0;
+        justify-content: center;
+    }
+
+    .skillBox p {
+        color: rgb(3, 12, 43);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin: 20px 0;
+        padding: 0px;
+        font-family: bold;
+        letter-spacing: 1px;
+    }
+
+    .skillBox p:nth-child(2) {
+        float: right;
+        position: relative;
+        top: 0;
+    }
+
+    .skillBox p:first-child {
+        float: right;
+        position: relative;
+        top: 35px;
     }
 
     hr {
         transform: rotate(180deg);
         width: 75%;
         margin: 20px 0;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 30px 0;
     }
 }
