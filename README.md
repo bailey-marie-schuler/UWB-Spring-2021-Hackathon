@@ -7,9 +7,9 @@ Our new design has a search bar, a much more practical way of searching through 
 ### Implementation Details
 We used HTML, CSS, JavaScript and Figma
 ### Some Issues
-
+Most of our team are fairly new programmers and have no experience with databases, but that is what hackathons are for! We struggled creating our database in html on our website. Another challenge we faced was extracted data with the search function on the website. Ultimately if we had more time we would work out these bugs, but it was an incredible learning experience. 
 ### Future Steps
-In the future we would like to display trends in teacher ratings so students can be aware of whether or not a professor is changing their course design. We would also like to implement a function where students can build a preliminary schedule and see how rigorous their schedule might be compared to the average schedule. We would like to use this design and offer it to the school so all students can have accessible data.
+In the future we would like to display trends in teacher ratings so students can be aware of whether or not a professor is changing their course design. We would also like to implement a function where students can build a preliminary schedule and see how rigorous their schedule might be compared to the average schedule. Our next steps would be to reach out to the University of Washington, who has already expressed concern about this outdated website, and help integrate our design into their current framework as a team. This would allow them to showcase their students work and ultimately have a much needed website renovation for free!
 
 ### Credits
 Bailey Schuler, Gwen Furiato, Kyle Huang, Kyle Huynh, and Kyle Fukuda
