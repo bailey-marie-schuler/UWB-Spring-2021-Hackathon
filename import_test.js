@@ -1,4 +1,4 @@
-// testing fetching/importing and implementing html
+// testing: fetching/importing and implementing html
 
 const faketeacherdata = 'faketeacher.csv';
 const teacherAndClass = 'teacherAndClass.json';
