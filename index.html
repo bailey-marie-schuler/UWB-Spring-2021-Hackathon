@@ -54,7 +54,7 @@
         <section class="slide-2">
             <img class="slide-2-img" src="images/uw_area1.jpg" placeholder="UW Area">
             <div class="slide-2-container">
-                <img src="images/uw_signature.png" alt="UW Signature">
+                <img src="images/uw_tag.png" width="22%" alt="UW Signature">
                 <p class="slide-2-text"></p>
             </div>
         </section>
@@ -78,7 +78,7 @@
         const teacher = 'teachers.csv';
 
         // fetching data
-        var myArray = [];
+        var myArray = '';
         fetch(`datas/${teacherAndClass}`)
             .then(res => res.json())
             .then(data => {
