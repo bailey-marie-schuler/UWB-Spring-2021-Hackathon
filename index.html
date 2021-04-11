@@ -75,7 +75,7 @@
         const faketeacherdata = 'faketeacher.csv';
         const teacherAndClass = 'teacherAndClass.json';
         const teacher = 'teachers.csv';
-        
+
         // fetching data
         var myArray = [];
         fetch(`datas/${teacherAndClass}`)
@@ -84,103 +84,78 @@
                 myArray = data;
                 console.log(myArray);
 
-        /*
-            let box = document.querySelector('.box');
+                //MyArray needs an array like the example above. Remove data in myArray and replace with
+                //data from CSV and then remove the buildTable function below this and it should in theory
+                //work as long as it follows the formatting.
 
-            document.addEventListener('DOMContentLoaded', () => {
-                fetch(`datas/${teacherAndClass}`)
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data)
-                        console.log("------------")
-                        data.map(value => {
-                            console.log(value[0])
-                            box.innerHTML +=
-                                `
-                        <p>${value[0]}</p>
-                        <p>${value[1]}</p>
-                        <p>${value[2]}</p>
-                        <p>${value[3]}</p>
-                        <p>${value[4]}</p>
-                        `
-                        })
-                    })
-            })
-        */
+                buildTable(myArray);
+                /*$.ajax({
+                    method:'GET',
+                    url:'https://raw.githubusercontent.com/kylevh/TEACHERDATA/main/teacherAndClass.json',
+                    success:function(response){
+                        myArray = response
+                        buildTable(myArray)
+                        console.log(myArray)
+                    }
 
+                })*/
 
-        //MyArray needs an array like the example above. Remove data in myArray and replace with
-        //data from CSV and then remove the buildTable function below this and it should in theory
-        //work as long as it follows the formatting.
+                //Search function updates everytime a 'keyup' is detected. Updates in real-time while typing
+                $('#search-input').on('keyup', function () {
+                    var value = $(this).val()
+                    console.log('Value:', value)
+                    var data = searchTable(value, myArray)
+                    buildTable(data)
+                })
 
-        buildTable(myArray);
-        /*$.ajax({
-            method:'GET',
-            url:'https://raw.githubusercontent.com/kylevh/TEACHERDATA/main/teacherAndClass.json',
-            success:function(response){
-                myArray = response
-                buildTable(myArray)
-                console.log(myArray)
-            }
+                //This is the column sort click detector. If say 'Year' is clicked, change descending order to ascending & vice versa
+                $('th').on('click', function () {
+                    var column = $(this).data('column')
+                    var order = $(this).data('order')
+                    var text = $(this).html()
+                    text = text.substring(0, text.length - 1)
 
-        })*/
+                    console.log('clicked', column, order)
 
-        //Search function updates everytime a 'keyup' is detected. Updates in real-time while typing
-        $('#search-input').on('keyup', function () {
-            var value = $(this).val()
-            console.log('Value:', value)
-            var data = searchTable(value, myArray)
-            buildTable(data)
-        })
-
-        //This is the column sort click detector. If say 'Year' is clicked, change descending order to ascending & vice versa
-        $('th').on('click', function () {
-            var column = $(this).data('column')
-            var order = $(this).data('order')
-            var text = $(this).html()
-            text = text.substring(0, text.length - 1)
-
-            console.log('clicked', column, order)
-
-            if (order == 'desc') {
-                $(this).data('order', "asc")
-                myArray = myArray.sort((a, b) => a[column] > b[column] ? 1 : -1)
-                text += '&#9660'
-            } else {
-                $(this).data('order', "desc")
-                myArray = myArray.sort((a, b) => a[column] < b[column] ? 1 : -1)
-                text += '&#9650'
-            }
-            $(this).html(text)
-            buildTable(myArray)
-        })
+                    if (order == 'desc') {
+                        $(this).data('order', "asc")
+                        myArray = myArray.sort((a, b) => a[column] > b[column] ? 1 : -1)
+                        text += '&#9660'
+                    } else {
+                        $(this).data('order', "desc")
+                        myArray = myArray.sort((a, b) => a[column] < b[column] ? 1 : -1)
+                        text += '&#9650'
+                    }
+                    $(this).html(text)
+                    buildTable(myArray)
+                })
 
 
-        //Inputs value which is typed by user into search bar and passes data which the collection of names and 
-        //classes, year, quarter, etc. and searches whether the value matches with any FirstName, if so, push
-        //out filteredData with all matches.
-        function searchTable(value, data) {
-            var filteredData = []
-            for (var i = 0; i < data.length; i++) {
-                value = value.toLowerCase()
-                var name = data[i].LastName.toLowerCase()
+                //Inputs value which is typed by user into search bar and passes data which the collection of names and 
+                //classes, year, quarter, etc. and searches whether the value matches with any FirstName, if so, push
+                //out filteredData with all matches.
+                function searchTable(value, data) {
+                    var filteredData = []
+                    for (var i = 0; i < data.length; i++) {
+                        value = value.toLowerCase()
+                        var name = data[i].LastName.toLowerCase()
 
-                if (name.includes(value)) {
-                    filteredData.push(data[i])
+                        if (name.includes(value)) {
+                            filteredData.push(data[i])
+                        }
+                    }
+
+                    return filteredData
                 }
-            }
 
-            return filteredData
-        }
+                function buildTable(data) {
+                    var table = document.getElementById('myTable')
 
-        function buildTable(data) {
-            var table = document.getElementById('myTable')
+                    table.innerHTML = ''
 
-            table.innerHTML = ''
-
-            //Prints rows with all the of the follow collumns from the array
-            for (var i = 0; i < data.length; i++) {
-                var row = `<tr>
+                    //Prints rows with all the of the follow collumns from the array
+                    for (var i = 0; i < data.length; i++) {
+                        var row = `<tr>
                                 <td>${data[i].LastName}</td>
                                 <td>${data[i].FirstName}</td>
                                 <td>${data[i].Department}</td>
@@ -189,10 +164,10 @@
                                 <td>${data[i].Quarter}</td>
 
                         </tr>`
-                table.innerHTML += row
-            }
-        }
-    });
+                        table.innerHTML += row
+                    }
+                }
+            });
     </script>
 
 </body>
