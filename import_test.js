@@ -6,10 +6,10 @@ let box = document.querySelector('.box');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    fetch(`data/${teacherAndClass}`)
+    fetch(`datas/${teacherAndClass}`)
         .then(res => res.json())
         .then(data => {
-            console.log(datas)
+            console.log(data)
             console.log("------------")
             data.map(value => {
                 console.log(value[0])
